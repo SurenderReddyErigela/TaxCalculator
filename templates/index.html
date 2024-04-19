@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Tax Calculator</title>
+</head>
+<body>
+    <h1>Canadian Tax Calculator</h1>
+    <form action="" method="post">
+        <label for="income">Enter your total income:</label>
+        <input type="number" id="income" name="income" required>
+        <br><br>
+        <label for="province">Select your province:</label>
+        <select id="province" name="province" required>
+            <option value="Ontario">Ontario</option>
+            <!-- Add more options for other provinces if needed -->
+        </select>
+        <br><br>
+        <label for="rrsp">Enter your RRSP contribution (% of income):</label>
+        <input type="number" id="rrsp" name="rrsp" required>
+        <br><br>
+        <button type="submit">Calculate Tax</button>
+    </form>
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
